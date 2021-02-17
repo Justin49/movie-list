@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PublicModule } from '../public/public.module';
 import { ProtectedModule } from '../protected/protected.module';
+// La librairie ngx-bootstrap nécéssite le module de Angular dédié aux anmations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -13,7 +15,8 @@ import { ProtectedModule } from '../protected/protected.module';
   imports: [
     CommonModule,
     PublicModule,
-    ProtectedModule
+    ProtectedModule,
+    BrowserAnimationsModule
   ]
 })
 export class CoreModule { }

@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  //Correspondance entre la route /home au composant Home
+  { path: 'home', component: HomeComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

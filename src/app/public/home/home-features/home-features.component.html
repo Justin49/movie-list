@@ -5,4 +5,12 @@
 <!--HomeFeatures est un composant smart, qui à pour rôle de fournir les données des fonctionnalités à afficher: combien de fonctionnalités, quels titres, quelles icônes, etc... On l'intègre ensuite à notre composant dump qui affiche les card des fonctionnalité et la page d'accueil sera presque terminer suite à cela-->
 
 <!--option ligne de commande : --module home permet de préciser que le composant créer appartient à tel ou tel module, --inline-style permet d'indiquer à Angular CLI de ne pas générer une feuille de style dans un fichier à part et skipTests indique de ne pas générer une classe de test pour le composant-->
-<p>home-features works!</p>
+<div class="container">
+    <!--On fait une boucle sur notre composant dump avec la directive *ngFor, on affiche autant de blocs que de fonctionnalité nécéssaire, on transmet les données aux composants dump grâce à la liaison de données [title]='monTitre' <=> @Input() title: string;-->
+    <app-home-feature-card *ngFor="let feature of features"
+      class="col-sm-3"
+      [title]="feature.title"
+      [text]="feature.text"
+      [picture]="feature.picture">
+    </app-home-feature-card>
+</div>

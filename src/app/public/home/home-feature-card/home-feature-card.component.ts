@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home-feature-card',
@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class HomeFeatureCardComponent implements OnInit {
+export class HomeFeatureCardComponent {
 
-  constructor() { }
+  // Donnée attendu par le composant(le titre, l'image et la description), on déclare les données sous forme de propriétés
 
-  ngOnInit(): void {
-  }
+  // Avec @Input, ont indique que les propriétés sont disponibles et qu'elles devront être injectées par le composant parent qui est home-feature
+  @Input() text: string;
+  @Input() picture: string;
+  @Input() title: string;
+
+
 
 }

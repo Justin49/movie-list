@@ -16,5 +16,4 @@ export class HomeFeatureCardComponent {
   @Input() title: string;
 
 
-
 }

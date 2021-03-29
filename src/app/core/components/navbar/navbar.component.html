@@ -1,8 +1,8 @@
-<div class="nav-bar">
-  <p>Movie List : Accueil</p>
+<!--Comme la barre de navigation n'est pas composant que l'on va utiliser à un seul endroit(qu'il n'est pas propre à la page d'accueil) mais il va être disponible dans toute l'application, il n'à donc rien à faire avec les autres composants de la page d'accueil. Le composant de la barre de navigation n'est pas réellement un élément qui est injecté et partagé à plusieurs endroits dans l'application. C'est un composant qui est injecté une seule fois, à la racine de l'application. Donc même si c'est un composant qui va apparaître plusieurs fois on l'ajoute dans le module Core.-->
+<nav class="nav-bar">
   <h1>Créer votre liste de film</h1>
   <div class="connexion">
     <button>Connexion</button>
     <button>Enregistrement sur le site, créez votre compte</button>
   </div>
-</div>
+</nav>

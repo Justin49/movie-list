@@ -1,0 +1,8 @@
+<!--L'utilisateur peut consulter son profil avec ses informations perso.-->
+<div class="container">
+  <!--On utilise le composant d'affichage profil-user-infos pour déléguer la logique d'affichage des informations d'un utilisateur, on utilise le pipe async fournit par Angular afin d'itérer sur les valeurs émises par l'observble user$. On récupère les infos de chaque user émise par cet observable dans une variable user et à la ligne suivante on passe cette variable user comme propriété d'entrée du composant profil-user-info-->
+  <app-profil-user-infos
+    *ngFor="let user of user$ | async"
+    [user]="user">
+  </app-profil-user-infos>
+</div>

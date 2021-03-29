@@ -16,7 +16,7 @@ export class HomeFeaturesComponent implements OnInit {
     this.features = [
       {
         title: 'Ajouter des films dans vos favoris',
-        text: 'Vous pourrez créer votre propre liste de films et ajouter les films que vous affectionnez tout particulièrement dans la liste de vos films favoris, vous pourrez mettre jusqu\'à 100 films dans vos favoris',
+        text: 'Vous pourrez créer votre propre liste de films et ajouter les films que vous affectionnez tout particulièrement dans la liste de vos films favoris, vous pourrez mettre jusqu\'à 50 films dans vos favoris',
         picture: 'assets/images/film.jpg'
       },
       {

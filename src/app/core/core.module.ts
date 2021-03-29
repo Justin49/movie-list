@@ -8,11 +8,12 @@ import { ProtectedModule } from '../protected/protected.module';
 // La librairie ngx-bootstrap nécéssite le module de Angular dédié aux anmations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from '../core/components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [FooterComponent, NavbarComponent],
   imports: [
     CommonModule,
     PublicModule,
@@ -20,7 +21,9 @@ import { FooterComponent } from '../core/components/footer/footer.component';
     BrowserAnimationsModule
   ],
   exports: [
-    FooterComponent
+    // On exporte les composants que l'on à besoin de réutiliser sur plusieurs page de notre site
+    FooterComponent,
+    NavbarComponent
   ]
 })
 export class CoreModule { }
